@@ -1,18 +1,18 @@
-let datos = prompt("ingrese su nombre y apellido ");
+//let datos = prompt("ingrese su nombre y apellido ");
 
-let direccion = prompt("indique la direccion de su domicilio");
+//let direccion = prompt("indique la direccion de su domicilio");
 console.log("envio para " + datos + " ala direccion " + direccion);
-let productos = prompt(
-  "ingresa un producto de nuestra lista " +
-    "\nhamburguesas" +
-    "\nmilanesas gigantes" +
-    "\npapas " +
-    "\npizzas" +
-    "\nempanadas"
-);
+//let productos = prompt(
+"ingresa un producto de nuestra lista " +
+  "\nhamburguesas" +
+  "\nmilanesas gigantes" +
+  "\npapas " +
+  "\npizzas" +
+  "\nempanadas";
+//);
 
-let cantidad = parseInt(prompt("que cantidad quiere ? "));
-let vuelto = parseInt(prompt("indique con cuanto va a abonar"));
+//let cantidad = parseInt(prompt("que cantidad quiere ? "));
+//let vuelto = parseInt(prompt("indique con cuanto va a abonar"));
 let total;
 switch (productos) {
   case "hamburguesas":
@@ -39,11 +39,29 @@ console.log("el precio es $" + total);
 alert(
   "ya estamos preparando su pedido muchas grasias " +
     datos +
-    "lo llevaremos a " +
+    " lo llevaremos a " +
     direccion +
     " apenas este hasta pronto "
 );
 console.log("el cliente va a abonar con $" + vuelto);
+
+if (vuelto > total) {
+  console.log(
+    "nuesto delivery devera llevar un total de $",
+    vuelto - total,
+    "para darle cambio al cliente"
+  );
+} else {
+  console.log("no le alcanza para pagar el producto ");
+  alert("su dinero no alcanza para pagar el producto");
+}
+
+console.log("el cliente va a abonar con $" + vuelto);
+
+const producto = [];
+producto.push(new producto("arroz"));
+
+//este es el fin del programa golomax
 
 //let n2 = parseInt(prompt("ingresa un numero"));
 //let n3 = parseInt(prompt(" "));

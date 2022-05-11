@@ -1,8 +1,9 @@
 body {
-  background-color: rgb(133, 14, 77);
+  background-color: #ff3b77;
 }
 header {
   padding: 0.6% 0.6%;
+  grid-template-columns: img-index img-index img-index img-index;
 }
 .dropdown {
   padding: 0.4%;
@@ -34,7 +35,7 @@ header {
 .btn-neon {
   position: relative;
   display: inline-block;
-  padding: 30px 100px;
+  padding: 30px 151px;
   color: aliceblue;
   letter-spacing: 4px;
   font-size: 1rem;
@@ -45,9 +46,9 @@ header {
 }
 
 .btn-neon:hover {
-  background: #850e4d;
-  -webkit-box-shadow: 0 0 4px #850e4d, 0 0 30px #850e4d, 0 0 80px #c40303;
-  box-shadow: 0 0 4px #850e4d, 0 0 30px #850e4d, 0 0 80px #850e4d;
+  background: #cca6bb;
+  -webkit-box-shadow: 0 0 4px #cca6bb, 0 0 30px #cca6bb, 0 0 80px #cca6bb;
+  box-shadow: 0 0 4px #cca6bb, 0 0 30px #cca6bb, 0 0 80px#cca6bb;
   -webkit-transition-delay: 0.7s;
   transition-delay: 0.7s;
 }
@@ -69,11 +70,20 @@ header {
     from(transparent),
     to(#850e4d)
   );
-  background: linear-gradient(90deg, transparent, #850e4d);
+  background: linear-gradient(90deg, transparent, #cca6bb);
 }
 
 .btn-neon:hover #span1 {
   left: 100%;
   -webkit-transition: 1.5s;
   transition: 1.5s;
+}
+.imagen-fondo {
+  width: 100%;
+}
+.imagen-exp {
+  width: 25%;
+}
+.letra-producto {
+  width: 40%;
 }
