@@ -1,18 +1,44 @@
-//let datos = prompt("ingrese su nombre y apellido ");
+let datos = prompt("ingrese su nombre y apellido ");
 
-//let direccion = prompt("indique la direccion de su domicilio");
+let direccion = prompt("indique la direccion de su domicilio");
 console.log("envio para " + datos + " ala direccion " + direccion);
-//let productos = prompt(
-"ingresa un producto de nuestra lista " +
-  "\nhamburguesas" +
-  "\nmilanesas gigantes" +
-  "\npapas " +
-  "\npizzas" +
-  "\nempanadas";
-//);
 
-//let cantidad = parseInt(prompt("que cantidad quiere ? "));
-//let vuelto = parseInt(prompt("indique con cuanto va a abonar"));
+const prod1 = {
+  nombre: "hamburguesas",
+  precio: 450,
+};
+const prod2 = {
+  nombre: "milanesas gigantes",
+  precio: 1000,
+};
+const prod3 = {
+  nombre: "papas",
+  precio: 200,
+};
+const prod4 = {
+  nombre: "pizzas",
+  precio: 500,
+};
+const prod5 = {
+  nombre: "empanadas",
+  precio: 600,
+};
+const prod = [prod1, prod2, prod3, prod4, prod5];
+console.log(prod);
+
+let productos = prompt(
+  "ingresa un producto de nuestra lista " +
+    "\nhamburguesas" +
+    "\nmilanesas gigantes" +
+    "\npapas " +
+    "\npizzas" +
+    "\nempanadas"
+);
+
+let cantidad = parseInt(prompt("que cantidad quiere ? "));
+console.log(cantidad + " " + productos);
+let vuelto = parseInt(prompt("indique con cuanto va a abonar"));
+
 let total;
 switch (productos) {
   case "hamburguesas":
@@ -20,12 +46,14 @@ switch (productos) {
 
   case "milanesas gigantes":
     total = cantidad * 1000;
+
     break;
   case "papas":
     total = cantidad * 200;
     break;
   case "pizzas":
     total = cantidad * 500;
+
     break;
   case "empanadas":
     total = cantidad * 600;
@@ -35,75 +63,40 @@ switch (productos) {
     alert("esa opcion no esta disponible");
     break;
 }
+
 console.log("el precio es $" + total);
-alert(
-  "ya estamos preparando su pedido muchas grasias " +
-    datos +
-    " lo llevaremos a " +
-    direccion +
-    " apenas este hasta pronto "
-);
+
 console.log("el cliente va a abonar con $" + vuelto);
 
+if (vuelto === total) {
+  console.log("el cliente abona con la plata justa");
+  alert("muchas grasias el pedido esta en proceso");
+}
 if (vuelto > total) {
   console.log(
     "nuesto delivery devera llevar un total de $",
     vuelto - total,
     "para darle cambio al cliente"
   );
-} else {
-  console.log("no le alcanza para pagar el producto ");
-  alert("su dinero no alcanza para pagar el producto");
+}
+if (vuelto < total) {
+  console.log("el cliente indico un monto menos al precio del producto ");
 }
 
-console.log("el cliente va a abonar con $" + vuelto);
+//class producto {
+//constructor(nombre, precio, id) {
+//this.nombre = nombre;
+//this.precio = precio;
+//this.id = id;
 
-const producto = [];
-producto.push(new producto("arroz"));
+//const hamburguesas = new hamburguesas("hamburguesas", 450, 1234);
+//const pizzas = new pizzas("pizza", 600, 2223);
+//const papas = new papas("papas", 200, 2044);
+//const empanadas = new empanadas("empanadas");
+//const milanesas = new milanesas("milanesas gigantes");
+//const prod = [hamburguesas, pizzas, papas, empanadas, milanesas];
+//  console.log(prod);
+//}
+//}
 
 //este es el fin del programa golomax
-
-//let n2 = parseInt(prompt("ingresa un numero"));
-//let n3 = parseInt(prompt(" "));
-//function sumar(num1, num2, num3) {
-// alert("el resultado de la sumaa es " + (num1 + num2 + num3));
-//}
-//sumar(n1, n2, n3);
-
-//let nombre = prompt("ingresa tu nombre");
-//console.log(
-//"este es nuestro catalogo de nuestros productos " +
-//"\nhamburguesa" + "\nempanadas" + "\nmilanesas";
-//);
-//let vari = parseInt(prompt());
-//let resultado = 0;
-//console.log(resultado);
-//function sumar(num1, num2) {
-// resultado = num1 + num2;
-//}
-//function mostrar(mensaje) {
-// console.log(mensaje);
-//}
-//sumar(vari, 5);
-//mostrar(resultado);
-//
-
-//let result = 0;
-//function restar(num1, num2) {
-//  result = num1 - num2;
-//}
-//restar(23, 4);
-
-//console.log(result);
-
-//let nombre = "dante";
-//let edad = 34;
-//let direccion = "calle falsa 123";
-//console.log(nombre + " " + edad + " " + direccion);
-
-//datos de un usuario
-//const abelbazan51 = {
-//nombre: "abel",
-//edad: 29,
-//direccion: "la paternal 591",
-//};
