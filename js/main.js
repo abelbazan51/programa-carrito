@@ -1,30 +1,34 @@
-let datos = prompt("ingrese su nombre y apellido ");
+/*  let datos = prompt("ingrese su nombre y apellido ");
 
 let direccion = prompt("indique la direccion de su domicilio");
 console.log("envio para " + datos + " ala direccion " + direccion);
 
-const prod1 = {
-  nombre: "hamburguesas",
-  precio: 450,
+class producto {
+  constructor(nombre, precio) {
+    this.nombre = nombre;
+    this.precio = precio;
+  }
+}
+
+const hambur = new producto("hamburguesa", 450);
+const papa = new producto("papas", 200);
+const pancho = new producto("panchos", 150);
+const pizza = new producto("pizzas", 500);
+const empanadas = new producto("empanadas", 600);
+const product = [hambur, papa, pancho, empanadas, pizza];
+console.log(product);
+
+// return nombre;
+
+const mostrarlista = () => {
+  let texto = "estos son nuestros precios\n";
+  product.forEach((element) => {
+    texto += `${element.nombre} ${element.precio}$ \n`;
+  });
+  alert(texto);
 };
-const prod2 = {
-  nombre: "milanesas gigantes",
-  precio: 1000,
-};
-const prod3 = {
-  nombre: "papas",
-  precio: 200,
-};
-const prod4 = {
-  nombre: "pizzas",
-  precio: 500,
-};
-const prod5 = {
-  nombre: "empanadas",
-  precio: 600,
-};
-const prod = [prod1, prod2, prod3, prod4, prod5];
-console.log(prod);
+
+mostrarlista();
 
 let productos = prompt(
   "ingresa un producto de nuestra lista " +
@@ -34,6 +38,16 @@ let productos = prompt(
     "\npizzas" +
     "\nempanadas"
 );
+while (productos === "") {
+  productos = prompt(
+    "ingresa un producto de nuestra lista " +
+      "\nhamburguesas" +
+      "\nmilanesas gigantes" +
+      "\npapas " +
+      "\npizzas" +
+      "\nempanadas"
+  );
+}
 
 let cantidad = parseInt(prompt("que cantidad quiere ? "));
 console.log(cantidad + " " + productos);
@@ -78,9 +92,13 @@ if (vuelto > total) {
     vuelto - total,
     "para darle cambio al cliente"
   );
+  alert("muchas grasias por elegirnos su pedido esta en proceso");
 }
 if (vuelto < total) {
   console.log("el cliente indico un monto menos al precio del producto ");
+  alert(
+    `indicaste ${vuelto} por lo tanto no te alcanza para pagar el producto`
+  );
 }
 
 //class producto {
@@ -100,3 +118,38 @@ if (vuelto < total) {
 //}
 
 //este es el fin del programa golomax
+
+//arrays funcionando
+
+/*  
+class producto {
+  constructor(nombre, precio) {
+    this.nombre = nombre;
+    this.precio = precio;
+  }
+}
+
+const hambur = new producto("hamburguesa", 450);
+const papa = new producto("papas", 200);
+const pancho = new producto("panchos", 150);
+const productos = [hambur, papa, pancho];
+console.log(productos);
+
+const saludar = () => {
+  let nombre = prompt("bienvenidos a pelis plus , indique su nombre");
+  while (nombre === "") {
+    nombre = prompt("bienvenidos a pelis plus , indique su nombre");
+  }
+  // return nombre;
+};
+
+const mostrarlista = () => {
+  let texto = "";
+  productos.forEach((element) => {
+    texto += `${element.nombre} ${element.precio} \n`;
+  });
+  alert(texto);
+};
+
+saludar();
+mostrarlista(); */
