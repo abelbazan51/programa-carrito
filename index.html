@@ -53,74 +53,32 @@
       
     </div>
   </nav>
-  
+  <main id="contenedor-productos"></main>
     <header>
     <h1>productos nuevos</h1>
-      <div class="row">
-        <div class="col-sm-5">
-          <div class="card">
-            <div class="card-body">
-              <img src="./imagenes/Captura de pantalla (2).png" alt="" class="imagen-exp">
-              <h5 class="card-title">hamburguesas</h5>
-              <p class="card-text">doble carne doble queso</p>
-              <a href="#" class="btn btn-primary">agregar al carrito</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-5">
-          <div class="card">
-            <div class="card-body">
-              <img src="./imagenes/Captura de pantalla (2).png" alt="" class="imagen-exp">
-              <h5 class="card-title">papas cheddar</h5>
-              <p class="card-text">papas fritas con cheddar al mejor estilo </p>
-              <a href="#" class="btn btn-primary">agregar  al carrito</a>
-            </div>
-          </div>
-        </div>
-      </div>
-     
+   
 
-<h2>pizzas</h2>
-<div class="row">
-  <div class="col-sm-5">
-    <div class="card">
-      <div class="card-body">
-        <img src="./imagenes/Captura de pantalla (2).png" alt="" class="imagen-exp">
-        <h5 class="card-title">calabresa</h5>
-        <p class="card-text">💥nueva pizza de calabresa 💥</p>
-        <a href="#" class="btn btn-primary">agregar al carrito</a>
+
+
+    <div class="modal-contenedor">
+      <div class="modal-carrito">
+        <h3>carrito</h3>
+        <button id="carritocerrar"> <i class="fas fa-times-circle"></i> </button>
+        <div id="carrito-contenedor">
+
+
+
+
+        </div>
+        <p class="precioproducto"> precio total:$ <span id="preciototal">0 </span></p>
+<button id="vaciar-carrito" class="boton-agregar">vaciar carrito </button>
       </div>
+
+
     </div>
-  </div>
-
-  <div class="col-sm-5">
-    <div class="card">
-      <div class="card-body">
-        <img src="./imagenes/Captura de pantalla (2).png" alt="" class="imagen-exp">
-        <h5 class="card-title">empanadas</h5>
-        <p class="card-text">las mejores empanadas y los mejores gustos </p>
-        <a href="#" class="btn btn-primary">agregar  al carrito</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-    <div class="row">
-      <div class="col-sm-5">
-        <div class="card">
-          <div class="card-body">
-            <img src="./imagenes/Captura de pantalla (2).png" alt="" class="imagen-exp">
-            <h5 class="card-title">milanesas gigantes </h5>
-            <p class="card-text">milanesa tamaño xxl </p>
-            <a href="#" class="btn btn-primary">agregar al carrito</a>
-          </div>
-        </div>
-      </div>
-    </header>
     <!-- JavaScript Bundle with Popper -->
     <script src="./js/main.js"></script>
+    <script src="./stock.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

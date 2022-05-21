@@ -1,4 +1,78 @@
-/*  let datos = prompt("ingrese su nombre y apellido ");
+let stockproductos = [
+  {
+    id: 1,
+    nombre: "hamburguesas",
+    cantidad: 40,
+    desc: "hamburguesa con chedar y panceta",
+    precio: 450,
+    img: "https://www.google.com.ar/url?sa=i&url=https%3A%2F%2Fwww.clarin.com%2Frecetas%2Fplatos-principales%2Fempanadas-saltenas_7_fEEsB1QkJ.html&psig=AOvVaw1P6XZR5YgIzOWi0lnMtJlv&ust=1653096089917000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCOjeivf48PcCFQAAAAAdAAAAABAD",
+  },
+  {
+    id: 2,
+    nombre: "papas fritas",
+    cantidad: 40,
+    desc: "bandeja de papas con cheddar",
+    precio: 200,
+    img: "https://www.google.com.ar/url?sa=i&url=https%3A%2F%2Fwww.clarin.com%2Frecetas%2Fplatos-principales%2Fempanadas-saltenas_7_fEEsB1QkJ.html&psig=AOvVaw1P6XZR5YgIzOWi0lnMtJlv&ust=1653096089917000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCOjeivf48PcCFQAAAAAdAAAAABAD  ",
+  },
+];
+
+const contenedorproductos = document.getElementById(`contenedor-productos`);
+const contenedorcarrito = document.getElementById(`carrito-contenedor`);
+const botonvaciar = document.getElementById(`vaciar-carrito`);
+let carrito = [];
+botonvaciar.addEventListener(`click`, () => {
+  carrito.length = 0;
+  actualizarcarrito();
+});
+stockproductos.forEach((producto) => {
+  const div = document.createElement(`div`);
+  div.classList.add(`producto`);
+  div.innerHTML = `
+  <img src=${producto.img} alt="">
+  <h3>${producto.nombre}</h3>
+  <p>${producto.desc}</p>
+  <img src=${producto.img} alt"img>
+  <p class="precioproducto"> precio:$ ${producto.precio} </p>
+  <button id="agregar${producto.id}" class="boton-agregar">agregar<i class="fas fa-shopping-cart"></i> </button>
+  `;
+  contenedorproductos.appendChild(div);
+
+  const boton = document.getElementById(`agregar${producto.id}`);
+
+  boton.addEventListener(`click`, () => {
+    agregaralcarrito(producto.id);
+  });
+});
+const agregaralcarrito = (prodid) => {
+  const item = stockproductos.find((prod) => prod.id === prodid);
+  carrito.push(item);
+  actualizarcarrito();
+  console.log(carrito);
+};
+const eliminarcarrito = (prodid) => {
+  const item = carrito.find((prod) => prod.id === prodid);
+  const indice = carrito.indexOf(item);
+  carrito.splice(indice, 1);
+  actualizarcarrito();
+};
+
+const actualizarcarrito = () => {
+  contenedorcarrito.innerHTML = "";
+  carrito.forEach((prod) => {
+    const div = document.createElement(`div`);
+    div.className = `productoencarrito`;
+    div.innerHTML = `
+    <p>${prod.nombre}</p>
+    <p> precio: ${prod.precio}</p>
+    <p> cantidad: <span id="cantidad" > ${prod.cantidad}</span> </p>
+  
+    <button onclick ="eliminardelcarrito(${prod.id})" class="boton-eliminar"> <i class="fas fa-trash-alt</button>
+    `;
+    contenedorcarrito.appendChild(div);
+  });
+};
+/* /et datos = prompt("ingrese su nombre y apellido ");
 
 let direccion = prompt("indique la direccion de su domicilio");
 console.log("envio para " + datos + " ala direccion " + direccion);
